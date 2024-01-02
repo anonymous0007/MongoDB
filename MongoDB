@@ -1,0 +1,63 @@
+Download mongoDB
+https://www.mongodb.com/download-center/community/releases/archive
+
+set Enviroment variables
+Set path to C:\Program Files\MongoDB\Server\3.X\bin\
+
+On MAC
+install brew
+brew update
+brew install mongodb
+mongod  // start the mongodb server
+Open another terminal
+mongo // we are IN
+
+Write a simple javascript function to check
+
+function test(num){
+return num * 2;
+}
+test(5); // out must be 10
+
+show all database
+show dbs
+
+chceck current database
+db
+
+Use any database
+use name_of_db
+
+Create a mongodb document and insert into database
+subha = {"name" : "subha sardar",
+        "position" : "SOC Analyst",
+        "email" : "subha@db.com",
+        "hiredate" : new Date()}
+
+Create a database: use new_DB
+Insert into database: db.new_DB.insert(subha)
+
+Find all information from a database which I created:
+db.new_DB.find()  // return must be same as your previous created document
+
+Create an empty Array then update with agruments and values:
+subha.testarray = []
+
+db.new_DB.update({"name" : "subha sardar"}, subha)
+
+Delete information
+db.new_DB.remove({"name" : "subha sardar"})
+
+mongodb data types:
+null  // null : {"name" : null}
+boolean  // boolean : {"adult18" : true}
+number  // number : {"length" : 15}
+string  // string : {"name" : "Subha Sardar"}
+array // {"somethings" : ["a","b",null,123]}
+
+use regular exression 
+{"regularExpression" : /^[A-Aa-z0-9\.\'\-]} {5,30}
+
+Document under document
+{"info" : {"name" : "subha sardar"}}
+
